@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+
+{% load static %}
+
+{% block page_content %}
+
+<!------ Calendar bootstrap ---------->
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" type="text/css" href="{% static 'beds_mgmt/bootstrap.min.css' %}">
+
+<!------ End bootstrap ---------->
+
+<h1>Camas disponibles</h1>
+<div class="container">
+  <div class="row">
+		<div class="col-sm-3">
+
+			<h2>Disponibles</h2>
+			<div class="accordion" id="rooms_list">
+				<div class="card">
+					<div class="card-header" id="headingOne">
+						<h5 class="mb-0">
+							<button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								Habitacion  #1
+							</button>
+						</h5>
+					</div>
+    			<div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#rooms_list">
+      			<div class="card-body">
+								<button type="button" class="btn btn-success">Cama 1</button><br /><br />
+								<button type="button" class="btn btn-success">Cama 2</button><br /><br /> 
+								<button type="button" class="btn btn-danger">Cama 3</button><br /><br />
+      			</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="headingTwo">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+											Habitacion #2
+							</button>
+						</h5>
+					</div>
+					<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#rooms_list">
+						<div class="card-body">
+							<button type="button" class="btn btn-danger">Cama 1</button><br /><br />
+							<button type="button" class="btn btn-danger">Cama 2</button><br /><br />
+							<button type="button" class="btn btn-danger">Cama 3</button><br /><br />
+						</div>
+					</div>
+				</div>
+
+				<div class="card">
+					<div class="card-header" id="headingThree">
+						<h5 class="mb-0">
+							<button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+											Habitacion #3
+							</button>
+						</h5>
+					</div>
+					<div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#rooms_list">
+						<div class="card-body">
+							<button type="button" class="btn btn-danger">Cama 1</button><br /><br />
+							<button type="button" class="btn btn-danger">Cama 2</button><br /><br />
+							<button type="button" class="btn btn-danger">Cama 3</button><br /><br />
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+    <div class="col-md-9">	<!-- New Calendar -->
+					
+		<div> <!-- End Calendar -->
+  </div>
+</div>
+
+{% endblock %}
